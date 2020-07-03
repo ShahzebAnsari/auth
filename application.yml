@@ -1,0 +1,17 @@
+apply:
+  routes:
+    - id: first-service-classRoute
+      uri: http://localhost:8081/
+      predicates:
+	path: /first, /second
+	method: Get, Post
+mynaukri:
+  routes:
+    - id: first-service-classRoute2
+      uri: http://localhost:8081/
+      predicates:
+        path: /first, /second
+	method: Get, Post
+      metadata:
+        response-timeout: 1000
+        connect-timeout: 500
